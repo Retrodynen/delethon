@@ -475,7 +475,7 @@ def prcs_args(args, client):
     Process delethon's args.
     """
     if args.offset_day:
-        utc = pytz.UTC()
+        utc = pytz.utc
         args.offset_day = utc.localize(
             datetime.datetime.today() - datetime.timedelta(days=args.offset_day))
 
